@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./images/Screenshot.png)
+![./images/Screenshot.png](screenshot)
 
 ### Links
 
@@ -68,4 +68,4 @@ next step after this project is to practice more user friendly designs with addi
 
 ## Author
 
-- Frontend Mentor - [molto](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@molto](https://www.frontendmentor.io/profile/yourusername)
