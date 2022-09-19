@@ -68,4 +68,4 @@ next step after this project is to practice more user friendly designs with addi
 
 ## Author
 
-- Frontend Mentor - [@molto](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@M0lt0](https://www.frontendmentor.io/profile/yourusername)
