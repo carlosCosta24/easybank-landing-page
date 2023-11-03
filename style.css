@@ -2,15 +2,15 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   border: none;
    font-family: "Public Sans", "Titillium Web", Arial, Helvetica, sans-serif;
  }
 
  body {
-   display: flexbox;
+   display: flex;
+   flex-direction: column;
    font-family: "Public Sans", sans-serif;
    color: var(--Grayish-Blue);
-   width: fit-content;
+   width: 100vw;
    --Dark-Blue: hsl(233, 26%, 24%);
    --Lime-Green: hsl(136, 65%, 51%);
    --Bright-Cyan: hsl(192, 70%, 51%);
@@ -18,7 +18,6 @@
    --Light-Grayish-Blue: hsl(220, 16%, 96%);
    --Very-Light-Gray: hsl(0, 0%, 98%);
    --White: hsl(0, 0%, 100%);
-   width: 100%;
  }
 
  /*
@@ -320,13 +319,176 @@ footer {
 
 }*/
 
- header {
-   width: 100%;
-   height: 20px;
-   background-color: var(--White);
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   border: 2px solid black;
+
+ @media screen and (min-width:400px) {
+   header {
+     width: 100%;
+     height: 50px;
+     background-color: var(--White);
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 10px;
+   }
+
+   .main-text {
+     margin-top: 325px;
+   }
+
+   .menu-items {
+     display: none;
+
+   }
+
+   .main-img::before {
+     content: " ";
+     position: absolute;
+     background-image: url(./images/bg-intro-desktop.svg);
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-repeat: no-repeat;
+     background-position: 37% -105px;
+     background-size: cover;
+     background-clip: border-box;
+     z-index: -10;
+   }
+
+   .main-img::after {
+     content: "";
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background-image: url(./images/image-mockups.png);
+     background-repeat: no-repeat;
+     background-position: right bottom;
+     background-size: contain;
+     top: -90px;
+     z-index: -5;
+   }
+
+   .main-text {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     gap: 20px;
+   }
+
+   .main-text h3 {
+     font-size: 30px;
+     color: var(--Dark-Blue);
+     font-family: "Public Sans", sans-serif;
+     font-weight: 300;
+     margin-bottom: 0px;
+     height: 50px;
+     width: 100%;
+   }
+
+   .header-button,
+   .main-button,
+   .footer-button {
+     border: none;
+     border-radius: 20px;
+     color: white;
+     height: 30px;
+     width: 120px;
+     background-image: linear-gradient(to right,
+         var(--Lime-Green),
+         var(--Bright-Cyan));
+   }
+
+   .header-button {
+     align-self: center;
+   }
+
+   .bank-description {
+     border: 2px solid black;
+     height: 1100px;
+     gap: 40px;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin-top: 20px;
+     background: var(--Light-Grayish-Blue);
+
+
+   }
+
+   .card-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     width: 80vw;
+     margin-left: auto;
+     gap: 12px;
+     height: 720px;
+   }
+
+   .description-header {
+     border: 2px solid yellow;
+     width: 100%;
+     height: 140px;
+     display: flex;
+     flex-direction: column;
+     padding: 10px;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     margin-top: 20px;
+
+
+   }
+
+   .description-header h3 {
+     width: 110px;
+     font-weight: 600;
+     font-size: 18px;
+     line-height: 25px;
+     font-family: "Public Sans", sans-serif;
+   }
+
+
+
+   .bank-description .card {
+     border: 2px solid blue;
+     width: 100%;
+     height: 250px;
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     align-items: center;
+     padding: 10px;
+   }
+
+   .card img {
+     width: 80px;
+     height: 80px;
+   }
+
+   .card p {
+     text-align: center;
+     line-height: 20px;
+   }
+
+   .bank-description .card-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     margin-left: auto;
+     gap: 12px;
+   }
+
+   .main-text-p {
+     width: 400px;
+     margin-top: 20px;
+   }
+
  }
