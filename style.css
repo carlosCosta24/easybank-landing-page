@@ -305,9 +305,14 @@
    }
  }
 
- @media screen and (max-width:400px) {
+ @media screen and (min-width:400px) {
+   body {
+     width: 100vw;
+
+   }
+
    header {
-     width: 100%;
+     width: 100vw;
      height: 50px;
      background-color: var(--White);
      display: flex;
@@ -579,3 +584,5 @@
    }
 
  }
+
+ /*start bem methodology*/
