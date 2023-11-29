@@ -64,6 +64,10 @@
      width: 120px;
    }
 
+   #humbuggerButton {
+     display: none;
+   }
+
    main {
      display: flex;
      margin-top: auto;
