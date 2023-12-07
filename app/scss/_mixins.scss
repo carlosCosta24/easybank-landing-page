@@ -1,0 +1,28 @@
+//breakpoints
+@media (min-width: 64em) {}
+
+//640px , 1024px, 1400px
+$break-up: (
+    "xl":"87.5em",
+    "lg":"64em",
+    "mid":"40em",
+);
+//639px , 1023px, 1399px
+
+$break-dw: (
+    "lg":"87.4em",
+    "mid":"63.39em",
+    "sm":"39.93em",
+);
+
+@mixin break-up($size) {
+    @media (min-width: map-get($break-up, $size)) {
+        @content;
+    }
+}
+
+@mixin break-dw($size) {
+    @media (max-width: map-get($break-dw, $size)) {
+        @content;
+    }
+}

@@ -1,0 +1,74 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Public Sans", "Titillium Web", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: $font-med;
+    color: $Grayish-Blue;
+    font-weight: 300;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: $Grayish-Blue;
+}
+
+//flexbox style
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+//buttons
+button,
+.button {
+    padding: 0.875rem 2.1875rem;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+    border: none;
+    color: $White;
+    font-weight: 400;
+
+}
+
+//visibility
+
+
+.hide-for-mob {
+    @include break-dw(mid) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include break-up(lg) {
+        display: none;
+    }
+
+}

@@ -26,7 +26,7 @@
    cursor: pointer;
  }
 
- @media(min-width:900px) {
+ @media only screen and (max-width:900px) {
 
    header {
      display: flex;
@@ -97,7 +97,7 @@
 
    .main-img {
      position: relative;
-     width: 50%;
+     max-width: 50%;
      height: 100%;
      background-size: cover;
      background-position: center;
@@ -108,8 +108,7 @@
      content: "";
      position: absolute;
      background-image: url(./images/bg-intro-desktop.svg);
-     width: 100%;
-     height: 100%;
+     height: auto;
      top: 0;
      left: 0;
      background-repeat: no-repeat;
@@ -122,7 +121,6 @@
      content: "";
      position: absolute;
      height: 100%;
-     width: 100%;
      background-image: url(./images/image-mockups.png);
      background-repeat: no-repeat;
      background-position: right bottom;
@@ -236,7 +234,6 @@
 
    .articles .card-container .card img {
      height: 50%;
-     width: 100%;
      object-fit: cover;
      border-radius: 8px;
    }
@@ -306,13 +303,9 @@
  }
 
  @media screen and (min-width:400px) {
-   body {
-     width: 100vw;
 
-   }
 
    header {
-     width: 100vw;
      height: 50px;
      background-color: var(--White);
      display: flex;
@@ -345,7 +338,6 @@
      content: " ";
      position: absolute;
      background-image: url(./images/bg-intro-desktop.svg);
-     width: 100%;
      height: 92%;
      top: -295px;
      left: 0;
@@ -360,7 +352,6 @@
      content: "";
      position: absolute;
      height: 90%;
-     width: 100%;
      background-image: url(./images/image-mockups.png);
      background-repeat: no-repeat;
      background-position: right bottom;
@@ -385,7 +376,7 @@
      font-weight: 300;
      margin-bottom: 0px;
      height: 50px;
-     width: 100%;
+
    }
 
    .description-header-pragraph {
@@ -418,7 +409,6 @@
      justify-content: center;
      display: flex;
      flex-direction: column;
-     width: 100%;
      margin-top: 20px;
      background: var(--Light-Grayish-Blue);
 
@@ -438,14 +428,12 @@
      flex-direction: column;
      justify-content: space-between;
      align-items: center;
-     width: 100%;
      margin-left: auto;
      gap: 12px;
      height: 720px;
    }
 
    .description-header {
-     width: 100%;
      height: 170px;
      display: flex;
      flex-direction: column;
@@ -461,7 +449,6 @@
 
 
    .description-header h3 {
-     width: 100%;
      font-weight: 600;
      font-size: 22px;
      line-height: 25px;
@@ -475,7 +462,6 @@
 
 
    .bank-description .card {
-     width: 100%;
      height: 250px;
      display: flex;
      flex-direction: column;
@@ -500,7 +486,6 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     width: 100%;
      margin-left: auto;
      gap: 12px;
    }
@@ -545,7 +530,6 @@
    .card-container-card h3,
    .card-container-card p {
      text-align: left;
-     width: 100%;
    }
 
    footer {
@@ -603,7 +587,6 @@
      align-items: center;
      gap: 12px;
      color: var(--Grayish-Blue);
-     width: 100%;
      margin-top: 10px;
    }
 
@@ -658,7 +641,6 @@
      content: " ";
      position: absolute;
      background-image: url(./images/bg-intro-desktop.svg);
-     width: 100%;
      height: 92%;
      top: -295px;
      left: 0;
@@ -673,7 +655,6 @@
      content: "";
      position: absolute;
      height: 90%;
-     width: 100%;
      background-image: url(./images/image-mockups.png);
      background-repeat: no-repeat;
      background-position: right bottom;
@@ -698,7 +679,6 @@
      font-weight: 300;
      margin-bottom: 0px;
      height: 50px;
-     width: 100%;
    }
 
    .description-header-pragraph {
@@ -731,7 +711,7 @@
      justify-content: center;
      display: flex;
      flex-direction: column;
-     width: 100%;
+     ;
      margin-top: 20px;
      background: var(--Light-Grayish-Blue);
 
@@ -751,14 +731,14 @@
      flex-direction: column;
      justify-content: space-between;
      align-items: center;
-     width: 100%;
+     ;
      margin-left: auto;
      gap: 12px;
      height: 720px;
    }
 
    .description-header {
-     width: 100%;
+
      height: 170px;
      display: flex;
      flex-direction: column;
@@ -774,7 +754,7 @@
 
 
    .description-header h3 {
-     width: 100%;
+
      font-weight: 600;
      font-size: 22px;
      line-height: 25px;
@@ -788,7 +768,7 @@
 
 
    .bank-description .card {
-     width: 100%;
+
      height: 250px;
      display: flex;
      flex-direction: column;
@@ -813,7 +793,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     width: 100%;
+     ;
      margin-left: auto;
      gap: 12px;
    }
@@ -858,7 +838,7 @@
    .card-container-card h3,
    .card-container-card p {
      text-align: left;
-     width: 100%;
+     ;
    }
 
    footer {
@@ -916,7 +896,7 @@
      align-items: center;
      gap: 12px;
      color: var(--Grayish-Blue);
-     width: 100%;
+     ;
      margin-top: 10px;
    }
 
@@ -971,7 +951,7 @@
      content: " ";
      position: absolute;
      background-image: url(./images/bg-intro-desktop.svg);
-     width: 100%;
+     ;
      height: 92%;
      top: -295px;
      left: 0;
@@ -986,7 +966,7 @@
      content: "";
      position: absolute;
      height: 90%;
-     width: 100%;
+     ;
      background-image: url(./images/image-mockups.png);
      background-repeat: no-repeat;
      background-position: right bottom;
@@ -1011,7 +991,7 @@
      font-weight: 300;
      margin-bottom: 0px;
      height: 50px;
-     width: 100%;
+     ;
    }
 
    .description-header-pragraph {
@@ -1044,7 +1024,7 @@
      justify-content: center;
      display: flex;
      flex-direction: column;
-     width: 100%;
+     ;
      margin-top: 20px;
      background: var(--Light-Grayish-Blue);
 
@@ -1064,14 +1044,13 @@
      flex-direction: column;
      justify-content: space-between;
      align-items: center;
-     width: 100%;
+     ;
      margin-left: auto;
      gap: 12px;
      height: 720px;
    }
 
    .description-header {
-     width: 100%;
      height: 170px;
      display: flex;
      flex-direction: column;
@@ -1087,7 +1066,6 @@
 
 
    .description-header h3 {
-     width: 100%;
      font-weight: 600;
      font-size: 22px;
      line-height: 25px;
@@ -1101,7 +1079,6 @@
 
 
    .bank-description .card {
-     width: 100%;
      height: 250px;
      display: flex;
      flex-direction: column;
@@ -1126,7 +1103,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     width: 100%;
+     ;
      margin-left: auto;
      gap: 12px;
    }
@@ -1171,7 +1148,6 @@
    .card-container-card h3,
    .card-container-card p {
      text-align: left;
-     width: 100%;
    }
 
    footer {
@@ -1229,7 +1205,7 @@
      align-items: center;
      gap: 12px;
      color: var(--Grayish-Blue);
-     width: 100%;
+     ;
      margin-top: 10px;
    }
 
