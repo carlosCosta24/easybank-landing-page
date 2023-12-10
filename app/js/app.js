@@ -20,4 +20,13 @@
 //             menu.appendChild(dropDownMenu)
 //         })
 // }
-console.log("ebd2 ya ngm");
+const menuButton = document.getElementById("open")
+menuButton.addEventListener("click" ,function changeStatus(){
+    if(menuButton.classList.contains("open")){
+
+        menuButton.classList.remove("open");
+    }else{
+        menuButton.classList.add("open");
+
+    }
+})

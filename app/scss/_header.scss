@@ -18,12 +18,27 @@
             width: 25px;
             height: 2px;
             background-color: $Dark-Blue;
+            transition: all 500ms ease-in-out;
+            transform-origin: center center;
 
             &:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
 
+        &.open {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
 
     }
 
@@ -62,6 +77,8 @@
 
 
         }
+
+
     }
 
     button {
@@ -72,6 +89,17 @@
         &:hover {
             opacity: 0.65;
         }
+    }
+
+    .dropdown {
+        position: fixed;
+        top: 3.75rem;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        //background-color: $Dark-Blue;
+        background-image: linear-gradient($Dark-Blue, transparent);
+
     }
 
 }
