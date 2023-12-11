@@ -23,15 +23,14 @@
 const menuButton = document.getElementById("open");
 const heder = document.getElementsByClassName("header")[0];
 const dropDownMenu = document.getElementsByClassName("dropdown")[0];
-console.log(heder)
 menuButton.addEventListener("click", function changeStatus() {
     if (heder.classList.contains("open")) {
         heder.classList.remove("open");
-        dropDownMenu.classList.add("fade-in");
-        heder.classList.remove("open");
+        dropDownMenu.classList.remove("fade-in");
+        dropDownMenu.classList.add("fade-out");
     } else {
         heder.classList.add("open");
-        dropDownMenu.classList.remove("fade-in");
+        dropDownMenu.classList.remove("fade-out");
         dropDownMenu.classList.add("fade-in");
 
 
