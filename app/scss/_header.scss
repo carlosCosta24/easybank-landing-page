@@ -1,4 +1,42 @@
 .header {
+    &.open {
+        .dropdown {
+            opacity: 1;
+        }
+
+        .header__menu {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .dropdown {
+        position: fixed;
+        opacity: 0;
+        top: 3.75rem;
+        left: 0;
+        bottom: 0px;
+        right: 0;
+        //background-color: $Dark-Blue;
+        background-image: linear-gradient($Dark-Blue, transparent);
+
+        &.fade-in {
+            display: block;
+        }
+        &.fade-out {
+            display: none;
+        }
+    }
+
     nav {
         padding: 1.065rem 1.5rem;
     }
@@ -11,9 +49,8 @@
     }
 
     &__menu {
-
         //mobile menu
-        >span {
+        > span {
             display: block;
             width: 25px;
             height: 2px;
@@ -25,26 +62,11 @@
                 margin-bottom: 5px;
             }
         }
-
-        &.open {
-            >span:first-child {
-                transform: rotate(45deg);
-            }
-
-            >span:nth-child(2) {
-                opacity: 0;
-            }
-
-            >span:last-child {
-                transform: rotate(-45deg);
-            }
-        }
-
     }
 
     &__links {
         a {
-            font-size: $font-sm ;
+            font-size: $font-sm;
             color: $Grayish-Blue;
             transition: color 600ms ease-in-out;
             position: relative;
@@ -74,11 +96,7 @@
                     opacity: 0.75;
                 }
             }
-
-
         }
-
-
     }
 
     button {
@@ -90,16 +108,4 @@
             opacity: 0.65;
         }
     }
-
-    .dropdown {
-        position: fixed;
-        top: 3.75rem;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        //background-color: $Dark-Blue;
-        background-image: linear-gradient($Dark-Blue, transparent);
-
-    }
-
 }

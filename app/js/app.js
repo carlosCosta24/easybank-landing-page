@@ -20,13 +20,21 @@
 //             menu.appendChild(dropDownMenu)
 //         })
 // }
-const menuButton = document.getElementById("open")
-menuButton.addEventListener("click" ,function changeStatus(){
-    if(menuButton.classList.contains("open")){
+const menuButton = document.getElementById("open");
+const heder = document.getElementsByClassName("header")[0];
+const dropDownMenu = document.getElementsByClassName("dropdown")[0];
+console.log(heder)
+menuButton.addEventListener("click", function changeStatus() {
+    if (heder.classList.contains("open")) {
+        heder.classList.remove("open");
+        dropDownMenu.classList.add("fade-in");
+        heder.classList.remove("open");
+    } else {
+        heder.classList.add("open");
+        dropDownMenu.classList.remove("fade-in");
+        dropDownMenu.classList.add("fade-in");
 
-        menuButton.classList.remove("open");
-    }else{
-        menuButton.classList.add("open");
 
     }
-})
+});
+
