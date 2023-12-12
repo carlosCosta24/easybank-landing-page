@@ -4,7 +4,7 @@
             opacity: 1;
         }
 
-        .header__menu {
+        .header__toggle {
             > span:first-child {
                 transform: rotate(45deg);
             }
@@ -28,17 +28,6 @@
         right: 0;
         //background-color: $Dark-Blue;
         background-image: linear-gradient($Dark-Blue, transparent);
-
-        // &.fade-in {
-        //     display: block;
-        // }
-        // &.fade-out {
-        //     display: none;
-        // }
-    }
-
-    nav {
-        padding: 1.065rem 1.5rem;
     }
 
     &__logo {
@@ -48,7 +37,7 @@
         }
     }
 
-    &__menu {
+    &__toggle {
         //mobile menu
         > span {
             display: block;
@@ -64,6 +53,23 @@
         }
     }
 
+    &__menu {
+        background: $White;
+        border-radius: 8px;
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.5rem;
+        visibility: hidden;
+        transition: visibility 100ms ease-in-out;
+        a {
+            color: $Dark-Blue;
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
+        }
+    }
     &__links {
         a {
             font-size: $font-sm;

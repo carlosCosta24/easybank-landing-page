@@ -1,7 +1,6 @@
 html {
     font-size: 100%;
     box-sizing: border-box;
-
 }
 
 *,
@@ -43,6 +42,10 @@ a:visited {
         align-items: center;
     }
 }
+//spacing
+.container {
+    padding: 1.065rem 1.5rem;
+}
 
 //buttons
 button,
@@ -54,11 +57,9 @@ button,
     border: none;
     color: $White;
     font-weight: 400;
-
 }
 
 //visibility
-
 
 .hide-for-mob {
     @include break-dw(mid) {
@@ -70,5 +71,4 @@ button,
     @include break-up(lg) {
         display: none;
     }
-
 }
