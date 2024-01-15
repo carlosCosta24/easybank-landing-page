@@ -66,6 +66,7 @@
         margin-top: 1.5rem;
         visibility: hidden;
         transition: visibility 100ms ease-in-out;
+        z-index: 10;
         a {
             color: $Dark-Blue;
             padding: 0.625rem;
@@ -109,10 +110,6 @@
     }
 
     button {
-        font-size: $font-sm;
-        color: $White;
-        transition: opacity 350ms ease-in-out;
-
         &:hover {
             opacity: 0.65;
         }

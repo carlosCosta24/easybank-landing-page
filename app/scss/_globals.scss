@@ -19,6 +19,7 @@ body {
     font-weight: 300;
     // &.noscroll {
     //     overflow: hidden;
+
     // }
 }
 h1,
@@ -52,19 +53,49 @@ a:visited {
 }
 //spacing
 .container {
-    padding: 1.065rem 1.5rem;
+    max-width: 69rem;
+    margin: 0 auto;
+    &__pall {
+        padding: 2.25rem 1.5rem;
+    }
+    &__py {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+    &__px {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    &__pt {
+        padding-top: 2.25rem;
+    }
+    &__pr {
+        padding-right: 1.5rem;
+    }
+    &__pb {
+        padding-bottom: 2.5rem;
+    }
+    &__pl {
+        padding-left: 1.5rem;
+    }
 }
 
 //buttons
 button,
 .button {
+    display: inline-block;
     padding: 0.875rem 2.1875rem;
     border-radius: 50px;
     cursor: pointer;
     background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
     border: none;
-    color: $White;
     font-weight: 400;
+    font-size: $font-sm;
+    color: $White !important;
+    transition: opacity 350ms ease-in-out;
+    &:hover {
+        opacity: 0.65;
+    }
 }
 
 //visibility

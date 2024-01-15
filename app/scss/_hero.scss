@@ -1,4 +1,13 @@
 .hero {
+    background-color: $Very-Light-Gray;
+    @include break-up(lg) {
+        .container {
+            display: flex;
+
+            align-items: center;
+        }
+    }
+
     &__img {
         background-image: url(/images/bg-intro-mobile.svg);
         background-size: cover;
@@ -7,14 +16,31 @@
         min-height: 17.5rem;
         position: relative;
         width: 100%;
-        border: 2px solid red;
+        @include break-up(lg) {
+            flex: 3;
+            order: 2;
+            height: 41rem;
+            // background-image: url(/images/bg-intro-desktop.svg);
+            //background-position: left center;
+        }
+
+        &::after {
+            content: " ";
+            background: url(/images/image-mockups.png);
+            height: 100%;
+            width: 100%;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            position: absolute;
+        }
 
         &::before {
             content: " ";
             background: url(/images/image-mockups.png);
             height: 100%;
             width: 100%;
-            background-size: 90%;
+            background-size: 50%;
             background-repeat: no-repeat;
             background-position: center bottom;
             position: absolute;
@@ -22,7 +48,15 @@
     }
     &__text {
         text-align: center;
+        @include break-up(lg) {
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
         h1 {
+            @include break-up(lg) {
+                font-size: $font-xlg;
+            }
             font-weight: 300;
             color: $Dark-Blue;
             line-height: 1.15;
