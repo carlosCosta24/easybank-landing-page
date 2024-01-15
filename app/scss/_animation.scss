@@ -13,7 +13,7 @@
     }
 }
 .fade-in {
-    animation: fade-in 350ms ease-in-out forwards;
+    animation: fade-in 450ms ease-in-out;
 }
 
 @keyframes fade-out {
@@ -34,5 +34,5 @@
 }
 
 .fade-out {
-    animation: fade-out 350ms ease-in-out forwards;
+    animation: fade-out 450ms ease-in-out;
 }

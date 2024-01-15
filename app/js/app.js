@@ -13,12 +13,24 @@ menuButton.addEventListener("click", function changeStatus() {
         headerMenu.style.visibility = "visible"
         dropDownMenu.classList.add("fade-in");
         dropDownMenu.classList.remove("fade-out");
-
-
-
-
+    }
+});
+dropDownMenu.addEventListener('click', () => {
+    if ("fade-in") {
+        heder.classList.remove("open");
+        dropDownMenu.classList.remove("fade-in");
+        headerMenu.style.visibility = "hidden";
+        dropDownMenu.classList.add("fade-out");
     }
 });
 
+window.addEventListener("scroll", () => {
+    if ("fade-in") {
+        heder.classList.remove("open");
+        dropDownMenu.classList.remove("fade-in");
+        headerMenu.style.visibility = "hidden";
+        dropDownMenu.classList.add("fade-out");
+    }
+})
 
 
