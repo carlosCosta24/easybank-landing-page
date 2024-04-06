@@ -51,7 +51,7 @@
         @include break-up(lg) {
             flex: 2;
             order: 1;
-            text-align: left;
+            text-align: center;
         }
         h1 {
             @include break-up(lg) {
