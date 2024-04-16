@@ -1,20 +1,19 @@
 .hero {
     background-color: $Very-Light-Gray;
+    .container {
     @include break-up(lg) {
-        .container {
             display: flex;
-
             align-items: center;
         }
     }
 
     &__img {
+        position: relative;
         background-image: url(/images/bg-intro-mobile.svg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 17.5rem;
-        position: relative;
         width: 100%;
         @include break-up(lg) {
             flex: 3;
@@ -24,6 +23,19 @@
             //background-position: left center;
         }
 
+        &::before {
+            @include break-up(lg){
+            content: " ";
+            background: url(/images/bg-intro-desktop.svg);
+            height: 100%;
+            width: 100%;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            position: absolute;
+            background-position: 0% 83%;
+            }
+        }
         &::after {
             content: " ";
             background: url(/images/image-mockups.png);
@@ -33,18 +45,16 @@
             background-repeat: no-repeat;
             background-position: center bottom;
             position: absolute;
+            @include break-up(lg){
+                width: 120%;
+                height: 122%;
+                background-size: 94%;
+                background-position: center 150%;
+                left: 22%;
+
+            }
         }
 
-        &::before {
-            content: " ";
-            background: url(/images/image-mockups.png);
-            height: 100%;
-            width: 100%;
-            background-size: 50%;
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            position: absolute;
-        }
     }
     &__text {
         text-align: center;
