@@ -1,4 +1,14 @@
 .header {
+    position: relative;
+    z-index: 1;
+
+    nav {
+        position: relative;
+        background-color: $white;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+    }
+
     &.open {
         .dropdown {
             opacity: 1;
@@ -8,15 +18,15 @@
         }
 
         .header__toggle {
-            > span:first-child {
+            >span:first-child {
                 transform: rotate(45deg);
             }
 
-            > span:nth-child(2) {
+            >span:nth-child(2) {
                 opacity: 0;
             }
 
-            > span:last-child {
+            >span:last-child {
                 transform: rotate(-45deg);
             }
         }
@@ -33,6 +43,8 @@
         background-image: linear-gradient($Dark-Blue, transparent);
     }
 
+
+
     &__logo {
         img {
             width: 8.8125rem;
@@ -41,8 +53,9 @@
     }
 
     &__toggle {
+
         //mobile menu
-        > span {
+        >span {
             display: block;
             width: 25px;
             height: 2px;
@@ -67,6 +80,7 @@
         visibility: hidden;
         transition: visibility 100ms ease-in-out;
         z-index: 10;
+
         a {
             color: $Dark-Blue;
             padding: 0.625rem;
@@ -74,6 +88,7 @@
             text-align: center;
         }
     }
+
     &__links {
         a {
             font-size: $font-sm;
