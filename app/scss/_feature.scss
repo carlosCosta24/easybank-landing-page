@@ -1,14 +1,10 @@
-.features {
-    margin-bottom: 10rem;
+.feature {
     background-color: $Light-Grayish-Blue;
     text-align: center;
 
-    @include break-up(lg) {
+    @include break-up(mid) {
         text-align: left;
     }
-}
-
-.feature {
 
     &__intro {
         margin-bottom: 3.75rem;
@@ -31,7 +27,7 @@
         padding: 0.93rem;
 
         @include break-up(mid) {
-            flex: 1 0 50%;
+            flex: 0 0 50%;
         }
 
         @include break-up(lg) {

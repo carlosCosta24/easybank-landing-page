@@ -13,22 +13,24 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Public Sans", "Titillium Web", Arial, Helvetica, sans-serif;
-    line-height: 1.5;
     font-size: $font-med;
-    color: $Grayish-Blue;
     font-weight: 300;
-    // &.noscroll {
-    //     overflow: hidden;
+    color: $Grayish-Blue;
+    line-height: 1.5;
+    overflow-x: hidden;
 
-    // }
+    @include break-up(lg) {
+        font-size: $font-med;
+    }
+
 }
 
 h1,
 h2,
 h3 {
     font-weight: 300;
-    font-size: 2.31rem;
     line-height: 1.15;
+    font-size: 2.31rem;
     color: $Dark-Blue;
     margin-top: 0;
 
@@ -101,6 +103,11 @@ a:visited {
     &__py {
         padding-top: 4.37rem;
         padding-bottom: 2.25rem;
+
+        @include break-up(lg) {
+            padding: 6rem 0 6rem 0;
+
+        }
     }
 
     &__px {
@@ -110,6 +117,11 @@ a:visited {
 
     &__pt {
         padding-top: 4.37rem;
+
+        @include break-up(lg) {
+            padding-top: 6rem;
+
+        }
     }
 
     &__pr {
@@ -118,6 +130,11 @@ a:visited {
 
     &__pb {
         padding-bottom: 4.37rem;
+
+        @include break-up(lg) {
+            padding-top: 6rem;
+
+        }
     }
 
     &__pl {
@@ -129,15 +146,17 @@ a:visited {
 button,
 .button {
     display: inline-block;
+    position: relative;
     padding: 0.875rem 2.1875rem;
     border-radius: 50px;
-    cursor: pointer;
     background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
     border: none;
     font-weight: 400;
     font-size: $font-sm;
-    color: $White !important;
+    color: $White ;
     transition: opacity 350ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
 
     &:hover {
         opacity: 0.65;
