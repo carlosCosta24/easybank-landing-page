@@ -22,10 +22,43 @@ body {
 
     // }
 }
+
 h1,
 h2,
 h3 {
+    font-weight: 300;
+    font-size: 2.31rem;
+    line-height: 1.15;
+    color: $Dark-Blue;
     margin-top: 0;
+
+
+}
+
+h1 {
+    font-size: 2.31rem;
+    margin-bottom: 1.5rem;
+
+    @include break-up(lg) {
+        font-size: $font-xlg;
+    }
+}
+
+
+h2 {
+    font-size: 1.87rem;
+    margin-bottom: 1.56rem;
+
+    @include break-up(lg) {
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
 }
 
 a,
@@ -51,30 +84,42 @@ a:visited {
         align-items: center;
     }
 }
+
 //spacing
 .container {
     max-width: 69rem;
     margin: 0 auto;
+
     &__pall {
-        padding: 2.25rem 1.5rem;
+        padding: 4.37rem 1.5rem;
+
+        @include break-up(lg) {
+            padding: 6rem 0 6rem 0;
+        }
     }
+
     &__py {
-        padding-top: 2.25rem;
+        padding-top: 4.37rem;
         padding-bottom: 2.25rem;
     }
+
     &__px {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
+
     &__pt {
-        padding-top: 2.25rem;
+        padding-top: 4.37rem;
     }
+
     &__pr {
         padding-right: 1.5rem;
     }
+
     &__pb {
-        padding-bottom: 2.5rem;
+        padding-bottom: 4.37rem;
     }
+
     &__pl {
         padding-left: 1.5rem;
     }
@@ -93,6 +138,7 @@ button,
     font-size: $font-sm;
     color: $White !important;
     transition: opacity 350ms ease-in-out;
+
     &:hover {
         opacity: 0.65;
     }

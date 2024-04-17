@@ -1,7 +1,8 @@
 .hero {
     background-color: $Very-Light-Gray;
+
     .container {
-    @include break-up(lg) {
+        @include break-up(lg) {
             display: flex;
             align-items: center;
         }
@@ -15,6 +16,7 @@
         background-position: center center;
         min-height: 17.5rem;
         width: 100%;
+
         @include break-up(lg) {
             flex: 3;
             order: 2;
@@ -24,18 +26,19 @@
         }
 
         &::before {
-            @include break-up(lg){
-            content: " ";
-            background: url(/images/bg-intro-desktop.svg);
-            height: 100%;
-            width: 100%;
-            background-size: 50%;
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            position: absolute;
-            background-position: 0% 83%;
+            @include break-up(lg) {
+                content: " ";
+                background: url(/images/bg-intro-desktop.svg);
+                height: 100%;
+                width: 100%;
+                background-size: 50%;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                position: absolute;
+                background-position: 0% 83%;
             }
         }
+
         &::after {
             content: " ";
             background: url(/images/image-mockups.png);
@@ -45,7 +48,8 @@
             background-repeat: no-repeat;
             background-position: center bottom;
             position: absolute;
-            @include break-up(lg){
+
+            @include break-up(lg) {
                 width: 120%;
                 height: 122%;
                 background-size: 94%;
@@ -56,26 +60,15 @@
         }
 
     }
+
     &__text {
         text-align: center;
+
         @include break-up(lg) {
             flex: 2;
             order: 1;
             text-align: center;
         }
-        h1 {
-            @include break-up(lg) {
-                font-size: $font-xlg;
-            }
-            font-weight: 300;
-            color: $Dark-Blue;
-            line-height: 1.15;
-            font-size: 2.31;
-            margin-bottom: 1.5rem;
-        }
-        p {
-            line-height: 1.5;
-            margin-bottom: 2.25rem;
-        }
+
     }
 }
