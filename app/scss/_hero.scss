@@ -8,6 +8,10 @@
         }
     }
 
+    &__cta {
+        color: $White !important;
+    }
+
     &__img {
         position: relative;
         background-image: url(/images/bg-intro-mobile.svg);
