@@ -34,4 +34,7 @@ menuButton.addEventListener("click", function changeStatus() {
 //     }
 // })
 
+//hover effect on social links
+const img = document.querySelectorAll('.footer__logo')
+console.log(img)
 

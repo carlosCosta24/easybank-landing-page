@@ -1,0 +1,130 @@
+.footer {
+    background-color: $Dark-Blue;
+    padding: 2.5rem;
+    text-align: center;
+    color: $White;
+
+
+    .container {
+        @include break-up(lg) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 2fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 'logo links1 links2 cta' 'social links1 links2 copy-rights';
+            align-items: start;
+        }
+    }
+
+    a {
+        color: $White;
+    }
+
+    &__log {
+        display: inline-block;
+
+        @include break-up(lg) {
+            grid-area: logo;
+        }
+
+        @include break-dw(mid) {
+            margin-bottom: 1.87rem;
+
+        }
+    }
+
+    &__social {
+
+
+        @include break-dw(mid) {
+            margin-bottom: 1.87rem;
+
+        }
+
+        a:not(:last-child) {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        @include break-up(lg) {
+            grid-area: social;
+            align-self: end;
+        }
+    }
+
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        font-size: 0.95rem;
+
+        @include break-up(lg) {
+            //align-items: start;
+            justify-content: space-between;
+        }
+
+        &__col-one {
+            @include break-up(lg) {
+                grid-area: links1;
+            }
+        }
+
+
+        &__col-tow {
+            @include break-up(lg) {
+                grid-area: links2;
+            }
+
+            @include break-dw(mid) {
+                margin-bottom: 1.87rem;
+
+            }
+
+
+        }
+
+        a {
+
+            line-height: 2.25rem;
+            transition: color 200ms ease-in-out;
+
+            &:hover {
+                color: $Lime-Green ;
+            }
+
+        }
+
+    }
+
+    &__cta {
+        @include break-up(lg) {
+            grid-area: cta;
+            justify-self: end;
+            text-align: right;
+        }
+
+        a.button {
+            @include break-dw(mid) {
+                margin-bottom: 1.87rem;
+                margin-top: 1.87rem;
+
+            }
+
+
+
+        }
+    }
+
+    &__copy-rights {
+        font-size: 0.812rem;
+        color: $Grayish-Blue;
+
+        @include break-up(lg) {
+
+            grid-area: copy-rights;
+            align-self: end;
+            justify-self: end;
+        }
+    }
+}
