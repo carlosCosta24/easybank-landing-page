@@ -1,18 +1,17 @@
-const body = document.querySelector('body')
 const menuButton = document.getElementById("open");
-const headerMenu = document.getElementsByClassName("header__menu")[0];
-const heder = document.getElementsByClassName("header")[0];
-const dropDownMenu = document.getElementsByClassName("dropdown")[0];
+const headerMenu = document.querySelector(".header__menu");
+const header = document.querySelector(".header");
+const dropDownMenu = document.querySelector(".dropdown");
 
 menuButton.addEventListener("click", function changeStatus() {
-    if (heder.classList.contains("open")) {
-        heder.classList.remove("open");
+    if (header.classList.contains("open")) {
+        header.classList.remove("open");
         dropDownMenu.classList.remove("fade-in");
         dropDownMenu.classList.add("fade-out");
         window.removeEventListener('scroll', prevent);
 
     } else {
-        heder.classList.add("open");
+        header.classList.add("open");
         headerMenu.style.visibility = "visible"
         dropDownMenu.classList.add("fade-in");
         dropDownMenu.classList.remove("fade-out");
